@@ -1,0 +1,22 @@
+body {
+    text-align: center;
+}
+
+#mainTable {
+    border: 2px solid gray;
+    display: inline-block;
+}
+
+.data {
+    width: 5px;
+    height: 5px;
+    background-color: white;
+}
+
+.sqOn {
+    background-color: black;
+}
+
+.ant {
+    background-color: red;
+}
