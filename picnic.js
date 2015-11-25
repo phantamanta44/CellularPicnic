@@ -10,7 +10,7 @@ $(document).ready(function() {
     // </SETTINGS>
     
     var DrawAction = { WHITE: 0, BLACK: 1, ANT_ON: 2, ANT_OFF: 3 };
-    var mainTable = $('#mainTable');
+    var mainTable = $('#mainTable'), counter = $('#counter');
     var facingDirs = [[0, -1], [1, 0], [0, 1], [-1, 0]];
     
     var grid = [];
@@ -87,6 +87,7 @@ $(document).ready(function() {
                     break;
             }
         });
+        counter.html('Step ' + iter + '<br>PosX ' + aX + '<br>PosY ' + aY + '<br>Face ' + aF);
         cb.call();
     };
     

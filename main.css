@@ -2,6 +2,14 @@ body {
     text-align: center;
 }
 
+#counter {
+    position: fixed;
+    top: 4px;
+    left: 4px;
+    text-align: left;
+    font-family: monospace;
+}
+
 #mainTable {
     border: 2px solid gray;
     display: inline-block;

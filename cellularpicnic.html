@@ -32,7 +32,7 @@
                 var cnt = 11000; // Number of iterations
                 // </SETTINGS>
                 var DrawAction = { WHITE: 0, BLACK: 1, ANT_ON: 2, ANT_OFF: 3 }, facingDirs = [[0, -1], [1, 0], [0, 1], [-1, 0]];
-                var mainTable = $('#mainTable');
+                var mainTable = $('#mainTable'), counter = $('#counter');
                 var grid = [], drawing = [], aX, aY, aF, iter = 0;
                 var init = function() {
                     for (var i = 0; i < gH; i++) {
@@ -94,6 +94,7 @@
                                 break;
                         }
                     });
+                    counter.html('Step ' + iter + '<br>PosX ' + aX + '<br>PosY ' + aY + '<br>Face ' + aF);
                     cb.call();
                 };
                 var getCell = function(x, y) { return grid[y][x]; };
@@ -104,6 +105,7 @@
         </script>
         <style>
             body { text-align: center; }
+            #counter { position: fixed; top: 4px; left: 4px; text-align: left; font-family: monospace; }
             #mainTable { border: 2px solid gray; display: inline-block; }
             .data { width: 5px; height: 5px; background-color: white;}
             .sqOn { background-color: black; }
@@ -111,6 +113,7 @@
         </style>
     </head>
     <body>
+        <div id="counter"></div>
         <div id="mainTable"></div>
     </body>
 </html>
